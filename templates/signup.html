@@ -50,17 +50,17 @@
   {% endwith %}
 
   <div class="grid md:grid-cols-2 gap-4">
-    <input type="text" id="fname" name="fname" placeholder="First Name" class="w-full border border-gray-300 rounded px-3 py-2" />
-    <input type="text" id="lname" name="lname" placeholder="Last Name" class="w-full border border-gray-300 rounded px-3 py-2" />
-    <input type="email" id="email" name="email" placeholder="Email" class="w-full border border-gray-300 rounded px-3 py-2" />
-    <input type="tel" id="phone_number" name="phone_number" placeholder="Phone Number" class="w-full border border-gray-300 rounded px-3 py-2" />
-    <input type="text" id="location" name="location" placeholder="Location (Country)" class="w-full border border-gray-300 rounded px-3 py-2" />
+    <input type="text" id="fname" name="fname" placeholder="First Name" class="w-full border border-gray-300 rounded px-3 py-2" required/>
+    <input type="text" id="lname" name="lname" placeholder="Last Name" class="w-full border border-gray-300 rounded px-3 py-2" required/>
+    <input type="email" id="email" name="email" placeholder="Email" class="w-full border border-gray-300 rounded px-3 py-2" required/>
+    <input type="tel" id="phone_number" name="phone_number" placeholder="Phone Number" class="w-full border border-gray-300 rounded px-3 py-2" required/>
+    <input type="text" id="location" name="location" placeholder="Location (Country)" class="w-full border border-gray-300 rounded px-3 py-2" required/>
   </div>
 
 <label for="hear" class="block text-md font-large text-gray-700 mb-1">
 How did you hear about us?
 </label>
-<select id="hear" name="hear" class="w-full border border-gray-300 rounded px-3 py-2 bg-white">
+<select id="hear" name="hear" class="w-full border border-gray-300 rounded px-3 py-2 bg-white" required>
 <option value="" disabled selected>Select an option</option>
 <option value="LinkedIn">LinkedIn</option>
 <option value="Twitter/X">Twitter/X</option>
@@ -72,7 +72,7 @@ How did you hear about us?
 <label for="plan" class="block text-md font-large text-gray-700 mb-1">
 Select Your Training Plan:
 </label>
-<select id="plan" name="plan" class="w-full border border-gray-300 rounded px-3 py-2 bg-white">
+<select id="plan" name="plan" class="w-full border border-gray-300 rounded px-3 py-2 bg-white" required>
 <option value="" disabled selected>Select an option</option>
 <option value="Salesforce Dev">Salesforce Dev</option>
 <option value="Python Dev">Python Dev</option>
@@ -85,7 +85,7 @@ Select Your Training Plan:
 <label for="current" class="block text-md font-large text-gray-700 mb-1">
 What is your current role?
 </label>
-<select id="current" name="current" class="w-full border border-gray-300 rounded px-3 py-2 bg-white">
+<select id="current" name="current" class="w-full border border-gray-300 rounded px-3 py-2 bg-white" required>
 <option value="" disabled selected>Select an option</option>
 <option value="Student (Python4Teens)">Student (Python4Teens)</option>
 <option value="School Administrator/Owner">School Administrator/Owner</option>
@@ -100,7 +100,7 @@ What is your current role?
 <label for="sfdev" class="block text-md font-large text-gray-700 mb-1">
 How would you rate your Salesforce Dev Experience?
 </label>
-<select id="sfdev" name="sfdev" class="w-full border border-gray-300 rounded px-3 py-2 bg-white">
+<select id="sfdev" name="sfdev" class="w-full border border-gray-300 rounded px-3 py-2 bg-white" required>
 <option value="" disabled selected>Select an option</option>
 <option value="Beginner (No experience or just starting)">Beginner (No experience or just starting)</option>
 <option value="Intermediate (Some hands-on experience)">Intermediate (Some hands-on experience)</option>
@@ -110,15 +110,15 @@ How would you rate your Salesforce Dev Experience?
 <label for="pythondev" class="block text-md font-large text-gray-700 mb-1">
 How would you rate your Python Dev Experience?
 </label>
-<select id="pythondev" name="pythondev" class="w-full border border-gray-300 rounded px-3 py-2 bg-white">
+<select id="pythondev" name="pythondev" class="w-full border border-gray-300 rounded px-3 py-2 bg-white" required>
 <option value="" disabled selected>Select an option</option>
 <option value="Beginner (No experience or just starting)">Beginner (No experience or just starting)</option>
 <option value="Intermediate (Some hands-on experience)">Intermediate (Some hands-on experience)</option>
 <option value="Advanced (Confident with Python)">Advanced (Confident with Python)</option>
 </select>
 
-  <textarea name="goals" rows="3" placeholder="Your goals for attending..." class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
-  <textarea name="specific" rows="2" placeholder="Any specific questions or expectations..." class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+  <textarea name="goals" rows="3" placeholder="Your goals for attending..." class="w-full border border-gray-300 rounded px-3 py-2" required></textarea>
+  <textarea name="specific" rows="2" placeholder="Any specific questions or expectations..." class="w-full border border-gray-300 rounded px-3 py-2" required></textarea>
 
   <div class="grid md:grid-cols-2 gap-4">
     <label class="flex items-center space-x-2">
@@ -137,7 +137,7 @@ How would you rate your Python Dev Experience?
     </label>
   </div>
 
-  <textarea name="comments" rows="2" placeholder="Any other comments..." class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+  <textarea name="comments" rows="2" placeholder="Any other comments..." class="w-full border border-gray-300 rounded px-3 py-2" required></textarea>
 
   <button type="submit"
     class="bg-blue-600 hover:bg-blue-700 text-white font-semibold w-full py-2 rounded transition duration-200">

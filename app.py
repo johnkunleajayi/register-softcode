@@ -54,7 +54,7 @@ def signup():
 })
 
 
-            flash("You have successfully signed up. You will get a mail from us soon!", "success")
+            flash("You have successfully Registered. A mail has been sent to you. Endeavour to check your Spam!", "success")
             return redirect(url_for('signup'))
 
         except Exception as e:

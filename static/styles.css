@@ -1,0 +1,274 @@
+/* Global Reset & Base Styles */
+
+/* Background Image for Auth Pages */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url("/static/coding3.jpeg"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: #002366;
+  }
+  
+  /* Container Overlay */
+  .container {
+    background-color: rgba(255, 255, 255, 0.95); /* slightly transparent */
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #007A33;
+  }
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fb;
+    color: #002366; /* RCCG Blue */
+    line-height: 1.6;
+  }
+  
+  /* Logo */
+  .logo {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .logo img {
+    max-height: 80px;
+  }
+  
+  /* Container Styles for Auth Pages */
+  .container {
+    max-width: 400px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #007A33; /* RCCG Green */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #002366;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Buttons */
+  button[type="submit"] {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.7rem;
+    background-color: #D62828; /* RCCG Red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #b71c1c;
+  }
+  
+  /* Links and Footer Text */
+  .container p {
+    text-align: center;
+    margin-top: 1rem;
+    color: #002366;
+  }
+  
+  .container a {
+    color: #007A33; /* RCCG Green */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .container a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Dashboard Layout */
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .dashboard-header {
+    background-color: #002366;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .dashboard-header .logo img {
+    height: 50px;
+    margin-right: 1rem;
+  }
+  
+  .dashboard-header h1 {
+    flex: 1;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .dashboard-header form {
+    margin: 0 0.5rem;
+  }
+  
+  .signout-btn {
+    background-color: #D62828;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signout-btn:hover {
+    background-color: #b71c1c;
+  }
+  
+  .dashboard-main {
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .profile-sidebar {
+    flex: 1;
+    max-width: 250px;
+    background-color: white;
+    border: 2px solid #007A33;
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  .profile-sidebar img {
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #002366;
+  }
+  
+  .basic-info p {
+    margin: 0.5rem 0;
+  }
+  
+  .profile-details {
+    flex: 3;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .profile-details h2 {
+    margin-top: 0;
+    color: #007A33;
+  }
+  
+
+  .progress-container {
+    margin: 1rem 0;
+    width: 100%;
+    }
+    
+    .progress-label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    }
+    
+    .progress-bar {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+    }
+    
+    .progress-fill { height: 100%; background-color: #d50000; 
+        width: 0%; 
+        -webkit-transition: width 0.5s ease-in-out; 
+        -moz-transition: width 0.5s ease-in-out; 
+        -ms-transition: width 0.5s ease-in-out; 
+        -o-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out;
+    }
+    
+    .assignments_completed-container {
+        margin: 1rem 0;
+        width: 100%;
+        }
+        
+        .assignments_completed-label {
+        font-weight: bold;
+        margin-bottom: 0.3rem;
+        }
+        
+        .assignments_completed-bar {
+        width: 100%;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 20px;
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+        }
+        
+        .assignments_completed-fill {
+        height: 100%;
+        background-color: #d50000;
+        width: 0%;
+        -webkit-transition: width 0.5s ease-in-out;
+        -moz-transition: width 0.5s ease-in-out;
+        -ms-transition: width 0.5s ease-in-out;
+        -o-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out;
+    }
+    

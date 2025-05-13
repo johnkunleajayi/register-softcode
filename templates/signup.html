@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SoftCode Academy - Signup</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    background: linear-gradient(135deg, #ff0000, #0000ff, #00ff00, #ffffff);
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+  }
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .glass {
+    
+    -webkit-backdrop-filter: blur(10px)
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+</style>
+</head>
+<body class="min-h-screen flex items-center justify-center px-4 py-12 relative">
+
+<!-- Optional background image -->
+<img src="https://www.svgrepo.com/show/331993/coding-browser-code.svg" alt="Coding Illustration"
+      class="absolute w-3/4 max-w-xl opacity-10 pointer-events-none z-0" style="bottom: 10%; right: 5%;">
+
+<form method="POST" class="glass z-10 w-full max-w-3xl p-8 rounded-lg shadow-lg space-y-6">
+  <div class="flex flex-col items-center space-y-2">
+<img src="{{ url_for('static', filename='SoftCode Academy.png') }}" alt="SoftCode Academy Logo" class="w-32 h-auto">
+<h2 class="text-5xl font-bold text-center text-gray-800">SoftCode Academy</h2>
+</div>
+
+  <h2 class="text-3xl font-bold text-center text-gray-800">Registration Form</h2>
+
+  <!-- Flash Messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="text-white text-sm p-3 rounded {{ 'bg-green-600' if category == 'success' else 'bg-red-600' }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <div class="grid md:grid-cols-2 gap-4">
+    <input type="text" id="fname" name="fname" placeholder="First Name" class="w-full border border-gray-300 rounded px-3 py-2" />
+    <input type="text" id="lname" name="lname" placeholder="Last Name" class="w-full border border-gray-300 rounded px-3 py-2" />
+    <input type="email" id="email" name="email" placeholder="Email" class="w-full border border-gray-300 rounded px-3 py-2" />
+    <input type="tel" id="phone_number" name="phone_number" placeholder="Phone Number" class="w-full border border-gray-300 rounded px-3 py-2" />
+    <input type="text" id="location" name="location" placeholder="Location (Country)" class="w-full border border-gray-300 rounded px-3 py-2" />
+  </div>
+
+<label for="hear" class="block text-md font-large text-gray-700 mb-1">
+How did you hear about us?
+</label>
+<select id="hear" name="hear" class="w-full border border-gray-300 rounded px-3 py-2 bg-white">
+<option value="" disabled selected>Select an option</option>
+<option value="LinkedIn">LinkedIn</option>
+<option value="Twitter/X">Twitter/X</option>
+<option value="WhatsApp">WhatsApp</option>
+<option value="Referral from a friend">Referral from a friend</option>
+<option value="Facebook">Facebook</option>
+</select>
+
+<label for="plan" class="block text-md font-large text-gray-700 mb-1">
+Select Your Training Plan:
+</label>
+<select id="plan" name="plan" class="w-full border border-gray-300 rounded px-3 py-2 bg-white">
+<option value="" disabled selected>Select an option</option>
+<option value="Salesforce Dev">Salesforce Dev</option>
+<option value="Python Dev">Python Dev</option>
+<option value="Salesforce+Python Dev">Salesforce+Python Dev</option>
+<option value="Python4Teens (Virtual)">Python4Teens (Virtual)</option>
+<option value="Python4Teens (Physical)">Python4Teens (Physical)</option>
+<option value="1:1 Dev Coaching">1:1 Dev Coaching</option>
+</select>
+
+<label for="current" class="block text-md font-large text-gray-700 mb-1">
+What is your current role?
+</label>
+<select id="current" name="current" class="w-full border border-gray-300 rounded px-3 py-2 bg-white">
+<option value="" disabled selected>Select an option</option>
+<option value="Student (Python4Teens)">Student (Python4Teens)</option>
+<option value="School Administrator/Owner">School Administrator/Owner</option>
+<option value="Salesforce Administrator">Salesforce Administrator</option>
+<option value="Python Learner">Python Learner</option>
+<option value="Transitioning to Salesforce">Transitioning to Salesforce</option>
+<option value="Transitioning to Python">Transitioning to Python</option>
+<option value="Parent (Python4Teens)">Parent (Python4Teens)</option>
+<option value="Pastor (Python4Teens)">Pastor (Python4Teens)</option>
+</select>
+
+<label for="sfdev" class="block text-md font-large text-gray-700 mb-1">
+How would you rate your Salesforce Dev Experience?
+</label>
+<select id="sfdev" name="sfdev" class="w-full border border-gray-300 rounded px-3 py-2 bg-white">
+<option value="" disabled selected>Select an option</option>
+<option value="Beginner (No experience or just starting)">Beginner (No experience or just starting)</option>
+<option value="Intermediate (Some hands-on experience)">Intermediate (Some hands-on experience)</option>
+<option value="Advanced (Confident with Apex, LWC, and automation)">Advanced (Confident with Apex, LWC, and automation)</option>
+</select>
+
+<label for="pythondev" class="block text-md font-large text-gray-700 mb-1">
+How would you rate your Python Dev Experience?
+</label>
+<select id="pythondev" name="pythondev" class="w-full border border-gray-300 rounded px-3 py-2 bg-white">
+<option value="" disabled selected>Select an option</option>
+<option value="Beginner (No experience or just starting)">Beginner (No experience or just starting)</option>
+<option value="Intermediate (Some hands-on experience)">Intermediate (Some hands-on experience)</option>
+<option value="Advanced (Confident with Python)">Advanced (Confident with Python)</option>
+</select>
+
+  <textarea name="goals" rows="3" placeholder="Your goals for attending..." class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+  <textarea name="specific" rows="2" placeholder="Any specific questions or expectations..." class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+
+  <div class="grid md:grid-cols-2 gap-4">
+    <label class="flex items-center space-x-2">
+      <input type="checkbox" name="updates" class="form-checkbox">
+      <span>Get updates from SoftCode?</span>
+    </label>
+
+    <label class="flex items-center space-x-2">
+      <input type="checkbox" name="weekend" class="form-checkbox">
+      <span>Committed to 4hrs each weekend?</span>
+    </label>
+
+    <label class="flex items-center space-x-2">
+      <input type="checkbox" name="practice" class="form-checkbox">
+      <span>Committed to 4hrs self-practice?</span>
+    </label>
+  </div>
+
+  <textarea name="comments" rows="2" placeholder="Any other comments..." class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+
+  <button type="submit"
+    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold w-full py-2 rounded transition duration-200">
+    Submit
+  </button>
+</form>
+</body>
+</html>
